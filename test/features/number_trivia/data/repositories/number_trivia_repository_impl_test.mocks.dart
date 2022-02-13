@@ -59,8 +59,8 @@ class MockNumberTriviaLocaleDataSource extends _i1.Mock
   }
 
   @override
-  _i4.Future<_i2.NumberTriviaModel> getLastNumberTrivia(int? number) =>
-      (super.noSuchMethod(Invocation.method(#getLastNumberTrivia, [number]),
+  _i4.Future<_i2.NumberTriviaModel> getLastNumberTrivia() =>
+      (super.noSuchMethod(Invocation.method(#getLastNumberTrivia, []),
               returnValue: Future<_i2.NumberTriviaModel>.value(
                   _FakeNumberTriviaModel_0()))
           as _i4.Future<_i2.NumberTriviaModel>);
