@@ -4,7 +4,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../features/number_trivia/data/repositories/number_trivia_repository_impl_test.mocks.dart';
 import 'network_info_test.mocks.dart';
 
 @GenerateMocks([DataConnectionChecker])
