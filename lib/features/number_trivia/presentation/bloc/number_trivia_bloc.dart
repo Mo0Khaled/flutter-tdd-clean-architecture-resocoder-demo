@@ -38,10 +38,11 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
           (failure) => emit(const NumberTriviaFailure(
               errorMessage: INVALID_INPUT_FAILURE_MESSAGE)),
           (integer) async {
-            // emit(NumberTriviaLoading());
+            emit(NumberTriviaLoading());
 
-            await getConcreteNumberTrivia(Params(number: integer));
-            // _eitherLoadedOrErrorState(emit, failureOrTrivia);
+            final failureOrTrivia =
+                await getConcreteNumberTrivia(Params(number: integer));
+            _eitherLoadedOrErrorState(emit, failureOrTrivia);
           },
         ),
       );
