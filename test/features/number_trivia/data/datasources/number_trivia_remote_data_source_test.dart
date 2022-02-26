@@ -9,7 +9,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
 
 import '../../../../fixtures/fixture_reader.dart';
-import 'number_trivia_remote_data_source_test.mocks.mocks.dart';
+import 'number_trivia_remote_data_source_test.mocks.dart';
 
 @GenerateMocks([http.Client])
 void main() {

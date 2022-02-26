@@ -5,10 +5,10 @@ import '../repositories/number_trivia_repository.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
-class GetConcereteNumberTriviaUseCase implements UseCase<NumberTrivia, Params> {
+class GetConcreteNumberTriviaUseCase implements UseCase<NumberTrivia, Params> {
   final NumberTriviaRepository repository;
 
-  GetConcereteNumberTriviaUseCase(this.repository);
+  GetConcreteNumberTriviaUseCase(this.repository);
 
   @override
   Future<Either<Failure, NumberTrivia>> call(Params params) async {

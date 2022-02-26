@@ -10,12 +10,12 @@ import 'get_concrete_number_trivia_test.mocks.dart';
 
 @GenerateMocks([NumberTriviaRepository])
 void main() {
-  late GetConcereteNumberTriviaUseCase useCase;
+  late GetConcreteNumberTriviaUseCase useCase;
   late MockNumberTriviaRepository mockNumberTriviaRepository;
 
   setUp(() {
     mockNumberTriviaRepository = MockNumberTriviaRepository();
-    useCase = GetConcereteNumberTriviaUseCase(mockNumberTriviaRepository);
+    useCase = GetConcreteNumberTriviaUseCase(mockNumberTriviaRepository);
   });
   const tNumber = 1;
   const tNumberTrivia = NumberTrivia(number: 1, text: "cece");
