@@ -12,7 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.4
   get_it: ^7.2.0
   # Bloc for state management
   flutter_bloc: ^8.0.1
@@ -32,7 +32,7 @@ dev_dependencies:
     sdk: flutter
   mockito: ^5.1.0
   build_runner: ^2.1.7
-  flutter_lints: ^1.0.0
+  flutter_lints: ^1.0.4
 
 flutter:
 

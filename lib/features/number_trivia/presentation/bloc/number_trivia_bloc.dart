@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:clean_arc/core/exceptions/failuers.dart';
+import 'package:clean_arc/core/usecases/usecase.dart';
 import 'package:clean_arc/core/utils/input_converter.dart';
 import 'package:clean_arc/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:clean_arc/features/number_trivia/domain/usecases/get_converete_number_trivia_usecase.dart';
@@ -48,7 +49,13 @@ class NumberTriviaBloc extends Bloc<NumberTriviaEvent, NumberTriviaState> {
       );
     });
 
-    on<GetTriviaForRandomNumber>((event, emit) {});
+    on<GetTriviaForRandomNumber>(
+      (event, emit) async {
+        emit(NumberTriviaLoading());
+        final failureOrTrivia = await getRandomNumberTrivia(NoParams());
+        _eitherLoadedOrErrorState(emit, failureOrTrivia);
+      },
+    );
   }
 
   void _eitherLoadedOrErrorState(Emitter<NumberTriviaState> emit,
